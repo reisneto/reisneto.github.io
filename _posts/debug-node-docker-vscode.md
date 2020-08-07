@@ -47,3 +47,5 @@ Hello world!
     "debug.javascript.usePreview": false,
   }
 ```
+
+special thanks to [this post](https://tjaddison.com/blog/2019/08/styling-markdown-tailwind-gatsby/) which helped me to styling my markdown -> html posts
