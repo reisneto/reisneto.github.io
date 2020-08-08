@@ -10,20 +10,16 @@ author:
 ogImage:
   url: '/assets/blog/dynamic-routing/cover.jpg'
 ---
-
-## TODO
-
-[ ] simple project with debug configured
-
 ## Motivation
 
 No more `console.log` everywhere on the project and then remove then to commit code!
 Also debugging we are able to get much more info about what is happening on an specific execution time
 In the end of the day, we may investigate better and solve problems faster
 
-## Create a sample application
+## Follow through the code
+`git clone git@github.com:reisneto/debug-node-docker-vscode.git`  
+[github repository](https://github.com/reisneto/debug-node-docker-vscode)
 
-Hey, sent me an <reisneto.alvaro@gmail.com> reminding to do it (or not, if you find it isn't necessary)
 
 ## Configure VS Code
 
@@ -69,6 +65,25 @@ Don't ask me why, but when the config below is true our breakpoints don't work! 
 The whole idea of this post is this: I spent about 2 hours to figure out my vs code version was preventing me to use debugger. Breakpoints were not working because of it, even when I put `debug.javascript.usePreview` to false!
 
 Had to downgrade to [version 1.46](https://code.visualstudio.com/updates/v1_46) to make it work.
+
+### Add inspect
+
+    at package.json add --inspect to your running tool
+
+    "scripts": {
+      "dev": "ts-node-dev --inspect=0.0.0.0 -- server.ts"
+    },
+
+    or
+
+    "scripts": {
+      "dev": "nodemon --inspect=0.0.0.0 server.js"
+    },
+
+`--inspect=0.0.0.0` makes it possible to listen inside docker container
+
+### That's it
+I suggest to take a look into the code at the repository, any questions you can reach me out at <reisneto.alvaro@gmail.com>
 
 ---
 
