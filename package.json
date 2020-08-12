@@ -5,7 +5,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "export": "yarn build && next export -o docs/",
+    "export": "yarn build && next export -o docs/ && touch docs/.nojekyll",
+    "touch": "touch TESTE.lg",
     "typecheck": "tsc"
   },
   "dependencies": {
